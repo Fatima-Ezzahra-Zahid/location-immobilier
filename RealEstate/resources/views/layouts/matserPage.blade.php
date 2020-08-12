@@ -10,17 +10,22 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'RealEstate') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('vendors/js/jquery.min.js') }}" defer></script>
+    <script src="{{ asset('vendors/js/poper.js') }}" defer></script>
+    <script src="{{ asset('vendors/js/bootstrap.min.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/21508b4b05.js" crossorigin="anonymous"></script>
+   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">  
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('vendors/fontawesome5/css/fontawesome-all.min.css')}}" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,6 +61,20 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
   </div>
 </nav>
 

@@ -3,11 +3,10 @@
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Workspace>
-	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{A7E5192A-384A-4856-91EA-47B9EBFDED0D}" Loaded="No" Name="MCD" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="MCD.mcd"/>
-		<Model Expanded="Yes" ID="{A7E5192A-384A-4856-91EA-47B9EBFDED0D}" Name="MCD" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="MCD.mcd"/>
-		<Model Expanded="Yes" ID="{1A143C14-2940-437F-8275-92EAA7D10088}" Name="MLD" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="MLD.mld"/>
-		<Model Expanded="Yes" ID="{420235D3-D2CB-44FA-BBB8-1B94CD7CC4FC}" Name="MPD" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="MPD.mpd"/>
+	<Local Selected="Yes">
+		<Model ID="{A7E5192A-384A-4856-91EA-47B9EBFDED0D}" Name="MCD" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="MCD.mcd"/>
+		<Model ID="{DAA8A195-FAEE-42C1-B38E-3A9D6F4AC450}" Name="MLD" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="MLD.mld"/>
+		<Model Expanded="Yes" ID="{B78195A6-F2BE-48E3-8C08-33F305AE0E63}" Name="MPD" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="MPD.mpd"/>
 	</Local>
 	<BrowserModule Name="Référentiel"/>
 </Workspace>

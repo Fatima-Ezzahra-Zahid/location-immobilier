@@ -14,14 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homePage');
 });
-
 
 Route::get('homePage', function () {
     return view('homePage');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('listeProperties', function () {
+    return view('listeProperties');
+});
+
+
+
+Route::get('Properties','FormController@index');
+
+Route::get('form','FormController@create');
+Route::post('form','FormController@store');
+
+
+Route::get('files', 'FileController@index');
+Route::post('files', 'FileController@store')->name('files.store');
+
+Auth::routes(['verify'=>true]);
+
